@@ -44,10 +44,3 @@ int search(const char* key, const trie* root)
     else
         return 0;
 }
-
-int main()
-{
-    trie* root = malloc(sizeof(trie));
-    
-    return 0;
-}
