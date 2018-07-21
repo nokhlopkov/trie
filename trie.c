@@ -26,14 +26,14 @@ int insert(char* key, trie* root)
         }
     }
     
-    if (strcmp(ptr->word, key) != 0)
+    if (!ptr->word)
     {
         ptr->word = malloc(strlen(key) + 1);
         ptr->word = strcpy(ptr->word, key);
         ptr->word[strlen(key)] = '\0';
         return 1;
     }
-    else
+    else if (strcmp(ptr->word, key) == 0)
         return 0;
 }
 
